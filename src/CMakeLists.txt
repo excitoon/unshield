@@ -12,4 +12,9 @@ endif()
 add_executable(unshield-deobfuscate "unshield-deobfuscate.c")
 target_link_libraries(unshield-deobfuscate libunshield)
 
+if(BUILD_STATIC)
+set_target_properties(unshield PROPERTIES LINK_FLAGS "-static -static-libgcc")
+set_target_properties(unshield-deobfuscate PROPERTIES LINK_FLAGS "-static -static-libgcc")
+endif()
+
 install(TARGETS unshield RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
