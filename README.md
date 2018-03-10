@@ -4,6 +4,14 @@ Unshield
 [![Build Status](https://travis-ci.org/twogood/unshield.png?branch=master)](https://travis-ci.org/twogood/unshield)
 
 
+Installation (Windows)
+----------------------
+
+```
+scoop bucket add user https://github.com/excitoon/scoop-user.git
+scoop install user/unshield
+```
+
 Support Unshield development
 ----------------------------
 
